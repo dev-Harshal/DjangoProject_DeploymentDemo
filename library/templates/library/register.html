@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="FIRST NAME" name="first_name"><br>
+        <input type="text" placeholder="LAST NAME" name="last_name"><br>
+        <input type="text" placeholder="MOBILE" name="mobile"><br>
+        <select name="gender" id="">
+            <option value="">Select Gender...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+        <input type="text" placeholder="USERNAME" name="username"><br>
+        <input type="password" placeholder="PASSWORD" name="password1"><br>
+        <input type="password" placeholder="COFIRM PASSWORD" name="password2"><br>
+        <button type="submit">REGISTER</button>
+        <h1>{{error}}</h1>
+    </form>
+</body>
+</html>
